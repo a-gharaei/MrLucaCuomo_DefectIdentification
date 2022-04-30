@@ -80,7 +80,7 @@ L2 = int((frame[case]-startpoint_difference[case])//LaserStepSize+1)
 window = int(L1 + L2)
 #print('L1:', L1, 'L2:', L2)
 
-new_df = pd.DataFrame(index=np.arange(first_picture[case], last_picture[case]) , columns= np.arange(0,window))
+new_df = pd.DataFrame(index=np.arange(first_picture[case], last_picture[case]+1) , columns= np.arange(0,window))
 pictureNumber, windowSize = new_df.shape
 
 for i in range(pictureNumber):
